@@ -1,0 +1,166 @@
+\hypertarget{class_calibration}{\section{Calibration Class Reference}
+\label{d2/d40/class_calibration}\index{Calibration@{Calibration}}
+}
+
+
+Implements L\-S\-Q\-R\-Recepies methods.  
+
+
+
+
+{\ttfamily \#include $<$Calibration.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \\*
+lsqr\-Recipes\-::\-Single\-Unknown\-Point\-Target\-U\-S\-Calibration\-Parameters\-Estimator\-::\-Data\-Type \hyperlink{class_calibration_af52a8932eb28acdb8d9c35fb863145d6}{Data\-Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_calibration_ab2b775f18ffbea5e79d4175a2e44f22d}{Insert\-Transformations} (vnl\-\_\-matrix$<$ double $>$ rotation\-Matrix, vnl\-\_\-vector$<$ double $>$ translation)
+\begin{DoxyCompactList}\small\item\em insert the rotation matrix of an image to transformations \end{DoxyCompactList}\item 
+void \hyperlink{class_calibration_adcd2af289aafc20b7dfd3adf3aa066e4}{Clear\-Transformations} ()
+\begin{DoxyCompactList}\small\item\em clear transformations \end{DoxyCompactList}\item 
+void \hyperlink{class_calibration_a8960012f68fb9f0eae6038549274a941}{Insert\-Image\-Points} (double p\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em insert the crosswire point of an image to image\-Points \end{DoxyCompactList}\item 
+void \hyperlink{class_calibration_a87978d8b81b28411e6e1bd8f8db32bb8}{Clear\-Image\-Points} ()
+\begin{DoxyCompactList}\small\item\em clear image\-Points \end{DoxyCompactList}\item 
+bool \hyperlink{class_calibration_af75144d0e8bbd275a46882189d67b172}{Calibrate} ()
+\begin{DoxyCompactList}\small\item\em estimate calibration parameters \end{DoxyCompactList}\item 
+std\-::vector$<$ double $>$ \hyperlink{class_calibration_a732ad8da48b5287c29482618f9cbf5fa}{get\-Estimated\-U\-S\-Calibration\-Parameters} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_calibration}{Calibration} $\ast$ \hyperlink{class_calibration_a31abdaca0f949a20e9563f8d3f16289f}{New} ()
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ lsqr\-Recipes\-::\-Frame $>$ \hyperlink{class_calibration_a017d6eeb363f25b9405c34dc9f8f3964}{transformations}
+\item 
+std\-::vector$<$ lsqr\-Recipes\-::\-Point2\-D $>$ \hyperlink{class_calibration_a47ea86d69e758e27787531ff5cca8cc0}{image\-Points}
+\begin{DoxyCompactList}\small\item\em contains the crosswire point in all images \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{class_calibration_af52a8932eb28acdb8d9c35fb863145d6}{Data\-Type} $>$ \hyperlink{class_calibration_ae60f27f8e8f6163ea55d1b8b70f96820}{data}
+\begin{DoxyCompactList}\small\item\em contain the data of all images \end{DoxyCompactList}\item 
+std\-::vector$<$ double $>$ \hyperlink{class_calibration_ac6eb35a52a7c44b079af5e533be6b48b}{estimated\-U\-S\-Calibration\-Parameters}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements L\-S\-Q\-R\-Recepies methods. 
+
+This classs have the calibration methods implemented in L\-S\-Q\-R\-Recipes to calibrate an Ultra Sound Probe with a cross wire phantom. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_calibration_af52a8932eb28acdb8d9c35fb863145d6}{\index{Calibration@{Calibration}!Data\-Type@{Data\-Type}}
+\index{Data\-Type@{Data\-Type}!Calibration@{Calibration}}
+\subsubsection[{Data\-Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef lsqr\-Recipes\-::\-Single\-Unknown\-Point\-Target\-U\-S\-Calibration\-Parameters\-Estimator\-::\-Data\-Type {\bf Calibration\-::\-Data\-Type}}}\label{d2/d40/class_calibration_af52a8932eb28acdb8d9c35fb863145d6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_calibration_af75144d0e8bbd275a46882189d67b172}{\index{Calibration@{Calibration}!Calibrate@{Calibrate}}
+\index{Calibrate@{Calibrate}!Calibration@{Calibration}}
+\subsubsection[{Calibrate}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Calibration\-::\-Calibrate} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d2/d40/class_calibration_af75144d0e8bbd275a46882189d67b172}
+
+
+estimate calibration parameters 
+
+\hypertarget{class_calibration_a87978d8b81b28411e6e1bd8f8db32bb8}{\index{Calibration@{Calibration}!Clear\-Image\-Points@{Clear\-Image\-Points}}
+\index{Clear\-Image\-Points@{Clear\-Image\-Points}!Calibration@{Calibration}}
+\subsubsection[{Clear\-Image\-Points}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Calibration\-::\-Clear\-Image\-Points} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d2/d40/class_calibration_a87978d8b81b28411e6e1bd8f8db32bb8}
+
+
+clear image\-Points 
+
+\hypertarget{class_calibration_adcd2af289aafc20b7dfd3adf3aa066e4}{\index{Calibration@{Calibration}!Clear\-Transformations@{Clear\-Transformations}}
+\index{Clear\-Transformations@{Clear\-Transformations}!Calibration@{Calibration}}
+\subsubsection[{Clear\-Transformations}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Calibration\-::\-Clear\-Transformations} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d2/d40/class_calibration_adcd2af289aafc20b7dfd3adf3aa066e4}
+
+
+clear transformations 
+
+\hypertarget{class_calibration_a732ad8da48b5287c29482618f9cbf5fa}{\index{Calibration@{Calibration}!get\-Estimated\-U\-S\-Calibration\-Parameters@{get\-Estimated\-U\-S\-Calibration\-Parameters}}
+\index{get\-Estimated\-U\-S\-Calibration\-Parameters@{get\-Estimated\-U\-S\-Calibration\-Parameters}!Calibration@{Calibration}}
+\subsubsection[{get\-Estimated\-U\-S\-Calibration\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ double $>$ {\bf Calibration\-::get\-Estimated\-U\-S\-Calibration\-Parameters} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d2/d40/class_calibration_a732ad8da48b5287c29482618f9cbf5fa}
+\hypertarget{class_calibration_a8960012f68fb9f0eae6038549274a941}{\index{Calibration@{Calibration}!Insert\-Image\-Points@{Insert\-Image\-Points}}
+\index{Insert\-Image\-Points@{Insert\-Image\-Points}!Calibration@{Calibration}}
+\subsubsection[{Insert\-Image\-Points}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Calibration\-::\-Insert\-Image\-Points} (
+\begin{DoxyParamCaption}
+\item[{double}]{p\mbox{[}2\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{d2/d40/class_calibration_a8960012f68fb9f0eae6038549274a941}
+
+
+insert the crosswire point of an image to image\-Points 
+
+\hypertarget{class_calibration_ab2b775f18ffbea5e79d4175a2e44f22d}{\index{Calibration@{Calibration}!Insert\-Transformations@{Insert\-Transformations}}
+\index{Insert\-Transformations@{Insert\-Transformations}!Calibration@{Calibration}}
+\subsubsection[{Insert\-Transformations}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Calibration\-::\-Insert\-Transformations} (
+\begin{DoxyParamCaption}
+\item[{vnl\-\_\-matrix$<$ double $>$}]{rotation\-Matrix, }
+\item[{vnl\-\_\-vector$<$ double $>$}]{translation}
+\end{DoxyParamCaption}
+)}}\label{d2/d40/class_calibration_ab2b775f18ffbea5e79d4175a2e44f22d}
+
+
+insert the rotation matrix of an image to transformations 
+
+\hypertarget{class_calibration_a31abdaca0f949a20e9563f8d3f16289f}{\index{Calibration@{Calibration}!New@{New}}
+\index{New@{New}!Calibration@{Calibration}}
+\subsubsection[{New}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Calibration}$\ast$ {\bf Calibration\-::\-New} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{d2/d40/class_calibration_a31abdaca0f949a20e9563f8d3f16289f}
+
+
+Constructor of the class. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_calibration_ae60f27f8e8f6163ea55d1b8b70f96820}{\index{Calibration@{Calibration}!data@{data}}
+\index{data@{data}!Calibration@{Calibration}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf Data\-Type} $>$ {\bf Calibration\-::data}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d40/class_calibration_ae60f27f8e8f6163ea55d1b8b70f96820}
+
+
+contain the data of all images 
+
+\hypertarget{class_calibration_ac6eb35a52a7c44b079af5e533be6b48b}{\index{Calibration@{Calibration}!estimated\-U\-S\-Calibration\-Parameters@{estimated\-U\-S\-Calibration\-Parameters}}
+\index{estimated\-U\-S\-Calibration\-Parameters@{estimated\-U\-S\-Calibration\-Parameters}!Calibration@{Calibration}}
+\subsubsection[{estimated\-U\-S\-Calibration\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ {\bf Calibration\-::estimated\-U\-S\-Calibration\-Parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d40/class_calibration_ac6eb35a52a7c44b079af5e533be6b48b}
+\hypertarget{class_calibration_a47ea86d69e758e27787531ff5cca8cc0}{\index{Calibration@{Calibration}!image\-Points@{image\-Points}}
+\index{image\-Points@{image\-Points}!Calibration@{Calibration}}
+\subsubsection[{image\-Points}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$lsqr\-Recipes\-::\-Point2\-D$>$ {\bf Calibration\-::image\-Points}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d40/class_calibration_a47ea86d69e758e27787531ff5cca8cc0}
+
+
+contains the crosswire point in all images 
+
+\hypertarget{class_calibration_a017d6eeb363f25b9405c34dc9f8f3964}{\index{Calibration@{Calibration}!transformations@{transformations}}
+\index{transformations@{transformations}!Calibration@{Calibration}}
+\subsubsection[{transformations}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$lsqr\-Recipes\-::\-Frame$>$ {\bf Calibration\-::transformations}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d40/class_calibration_a017d6eeb363f25b9405c34dc9f8f3964}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_calibration_8h}{Calibration.\-h}\item 
+\hyperlink{_calibration_8cpp}{Calibration.\-cpp}\end{DoxyCompactItemize}

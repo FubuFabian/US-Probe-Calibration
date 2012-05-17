@@ -1,0 +1,11 @@
+Created by Fabian Torres Robles
+CCADET UNAM, Mexico 
+24/01/12
+
+This program is used to estimate the ultrasound probe calibration parameters with a crosswire phantom
+
+It is needed to pre-build
+- ITK
+- VTK
+- QT
+- LSQRRecipes

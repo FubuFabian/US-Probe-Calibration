@@ -1,0 +1,476 @@
+\hypertarget{class_q_v_t_k_image_widget}{\section{Q\-V\-T\-K\-Image\-Widget Class Reference}
+\label{d8/dd7/class_q_v_t_k_image_widget}\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}}
+}
+
+
+Display V\-T\-K images.  
+
+
+
+
+{\ttfamily \#include $<$Q\-V\-T\-K\-Image\-Widget.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_v_t_k_image_widget_ab32cec8874449b586d7fbf6eac7e6b8d}{Q\-V\-T\-K\-Image\-Widget} (Q\-Widget $\ast$parent=0)
+\item 
+virtual \hyperlink{class_q_v_t_k_image_widget_a60ba9a3e24a288e7a73cfca5caaf7393}{$\sim$\-Q\-V\-T\-K\-Image\-Widget} ()
+\item 
+void \hyperlink{class_q_v_t_k_image_widget_a99ccfbda431140e785a672432b500743}{set\-And\-Display\-Image} (Q\-String image\-Filename)
+\item 
+void \hyperlink{class_q_v_t_k_image_widget_aebaa775058eebd750adbdb7c70fdd90a}{set\-And\-Display\-Image} (vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ image)
+\begin{DoxyCompactList}\small\item\em Sets and display the given vtk\-Image\-Data. \end{DoxyCompactList}\item 
+void \hyperlink{class_q_v_t_k_image_widget_acd43450864ef2c0cdd7b8d37f045d8fd}{set\-And\-Display\-Multiple\-Images} (Q\-String\-List filenames)
+\begin{DoxyCompactList}\small\item\em Set and display multiple images from a given images filenames. Display the image corresponding to the first element on the filenmaes list. \end{DoxyCompactList}\item 
+void \hyperlink{class_q_v_t_k_image_widget_ae2b3f8c58a1c1162ce506b6da4a49e4c}{set\-And\-Display\-Multiple\-Images} (std\-::vector$<$ vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ $>$ \hyperlink{class_q_v_t_k_image_widget_a336708e27578dab885b069f12c120138}{image\-Stack})
+\begin{DoxyCompactList}\small\item\em Set and display multiple images from a given vtk\-Image\-Data Array. \end{DoxyCompactList}\item 
+void \hyperlink{class_q_v_t_k_image_widget_a74232311be68637533974b68b4d63bc5}{display\-Selected\-Image} (int idx)
+\begin{DoxyCompactList}\small\item\em display an image stored in this image\-Stack. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_q_v_t_k_image_widget_acb6c70c4b6e1394b0054d0902e72fcbf}{get\-Pixel\-Type} ()
+\begin{DoxyCompactList}\small\item\em Returns the pixel type in loaded images. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_q_v_t_k_image_widget_af0626a3fda57807caecbbe115e95d409}{get\-Image\-Type} ()
+\begin{DoxyCompactList}\small\item\em Returns the type of image displayed. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_q_v_t_k_image_widget_ac1b3215b0360177a7dfaad8461f42790}{get\-Num\-Of\-Dimesions} ()
+\begin{DoxyCompactList}\small\item\em Return the numer of dimensions of the image. \end{DoxyCompactList}\item 
+std\-::vector$<$ vtk\-Smart\-Pointer\\*
+$<$ vtk\-Image\-Data $>$ $>$ \hyperlink{class_q_v_t_k_image_widget_a912b460d82be67f391cb1375429ffea7}{get\-Image\-Stack} ()
+\begin{DoxyCompactList}\small\item\em return this image stack \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_q_v_t_k_image_widget_aa2dc225bbfe290f57b0c61bde02566a8}{get\-Image\-Size} ()
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_a73a82e34e589dc83bc98ea482ac49f53}{get\-Image\-Width} ()
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_afbaa4d7a3881794acaef89eab7ad23ec}{get\-Image\-Heigth} ()
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_a4d7064fe8b60c16ce6e33122595850f2}{get\-X\-Picked} ()
+\begin{DoxyCompactList}\small\item\em Return the mouse x coordinate position when mouse left button is pressed. \end{DoxyCompactList}\item 
+int \hyperlink{class_q_v_t_k_image_widget_a9bb1f5c8af59046c632ce4401c14999b}{get\-Y\-Picked} ()
+\begin{DoxyCompactList}\small\item\em Return the mouse y coordinate position when mouse left button is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{class_q_v_t_k_image_widget_a088f422bce686308654f8c0899c1780f}{set\-X\-Picked} (int \hyperlink{class_q_v_t_k_image_widget_afd88ea5dbed175232b0c15cbe4cdca89}{x\-Position})
+\begin{DoxyCompactList}\small\item\em Set the mouse x coordinate position when mouse left button is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{class_q_v_t_k_image_widget_a33c482cc6629c52762f27649e39f6006}{set\-Y\-Picked} (int \hyperlink{class_q_v_t_k_image_widget_a6724caff3a614db8321deaa70532255c}{y\-Position})
+\begin{DoxyCompactList}\small\item\em Set the mouse y coordinate position when mouse left button is pressed. \end{DoxyCompactList}\item 
+vtk\-Smart\-Pointer$<$ vtk\-Image\-Viewer2 $>$ \hyperlink{class_q_v_t_k_image_widget_aaa03d39486c547c29d54127cf936c884}{get\-Image\-Viewer} ()
+\begin{DoxyCompactList}\small\item\em Return this widget image viewer. \end{DoxyCompactList}\item 
+Q\-V\-T\-K\-Widget $\ast$ \hyperlink{class_q_v_t_k_image_widget_a41d916b555961f04dbdb571d8263c515}{get\-Q\-V\-T\-K\-Widget} ()
+\begin{DoxyCompactList}\small\item\em Return this qvtk\-Widget. \end{DoxyCompactList}\item 
+int \hyperlink{class_q_v_t_k_image_widget_ae41186ba6e99598e4ad4380f7d7ef638}{get\-Image\-Displayed\-Index} ()
+\begin{DoxyCompactList}\small\item\em If an image stack is loaded, then return the index in the image stack of displayed image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_q_v_t_k_image_widget_ac1af73fa525569f5ec5d581561b379a3}{is\-Image\-Stack\-Loaded}
+\begin{DoxyCompactList}\small\item\em Flag to know if it's displayed an image stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_q_v_t_k_image_widget_a148e0e9402c79f81afd1079754aec7d2}{set\-Image\-Properties} (bool verbose)
+\item 
+void \hyperlink{class_q_v_t_k_image_widget_a48d0dad3ffc56126e2f3cbf14ee0fe98}{display\-Image} (vtk\-Image\-Data $\ast$image)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-V\-T\-K\-Widget $\ast$ \hyperlink{class_q_v_t_k_image_widget_a461f6ca20211ec9ff4b367aeb95e8139}{qvtk\-Widget}
+\item 
+Image\-Type\-::\-Pointer \hyperlink{class_q_v_t_k_image_widget_ae5b308466d4f198990b9d132319f9f34}{itk\-Image}
+\item 
+R\-G\-B\-Image\-Type\-::\-Pointer \hyperlink{class_q_v_t_k_image_widget_ae8cea614979ccdb6fe65551c8269b116}{rgb\-Itk\-Image}
+\item 
+vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ \hyperlink{class_q_v_t_k_image_widget_aa55aaf6e037ee4d789449ff3d365201b}{vtk\-Image}
+\item 
+vtk\-Smart\-Pointer$<$ vtk\-Render\-Window $>$ \hyperlink{class_q_v_t_k_image_widget_a1ffdb2716a14bd2cb4dc845c50fc474c}{renwin}
+\item 
+vtk\-Smart\-Pointer$<$ vtk\-Renderer $>$ \hyperlink{class_q_v_t_k_image_widget_a06c273e6e390e8e860fa4c0c932a2cf8}{renderer}
+\item 
+std\-::vector$<$ vtk\-Smart\-Pointer\\*
+$<$ vtk\-Image\-Data $>$ $>$ \hyperlink{class_q_v_t_k_image_widget_a336708e27578dab885b069f12c120138}{image\-Stack}
+\begin{DoxyCompactList}\small\item\em A vtk\-Image\-Data Vector for keep the image references when load an image stack. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_q_v_t_k_image_widget_a067b78e68ed458d840ad1cf0d16b4ad6}{pixel\-Type}
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_a132867322988e692c324f5cc66697341}{image\-Type}
+\item 
+size\-\_\-t \hyperlink{class_q_v_t_k_image_widget_a6aff403421ea538248d48116a942271b}{num\-Dimensions}
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_a1ab611f7637a7885347b07ba9aa42e22}{image\-Width}
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_acc1b249b96b147b447366361331ef60a}{image\-Height}
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_afd88ea5dbed175232b0c15cbe4cdca89}{x\-Position}
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_a6724caff3a614db8321deaa70532255c}{y\-Position}
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_a17897def9ef084b36378099c51f94be3}{x\-Picked}
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_a484346a1e5c956917e7e35a22aee125a}{y\-Picked}
+\item 
+int \hyperlink{class_q_v_t_k_image_widget_af88ceea1f8553e4773e50b0362ffec3a}{image\-Displayed\-Index}
+\item 
+vtk\-Smart\-Pointer$<$ vtk\-Image\-Viewer2 $>$ \hyperlink{class_q_v_t_k_image_widget_aea73088ee5e4070c846427b8756cbfff}{image\-Viewer}
+\item 
+vtk\-Smart\-Pointer\\*
+$<$ vtk\-Corner\-Annotation $>$ \hyperlink{class_q_v_t_k_image_widget_a4c5a9fab33dfc90a74abe775fb6c50f5}{corner\-Annotation}
+\begin{DoxyCompactList}\small\item\em Object for display information in the corners of the vtk\-Image\-Viewer2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Display V\-T\-K images. 
+
+This class allows the user to display vtk\-Users on Q\-T 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_q_v_t_k_image_widget_ab32cec8874449b586d7fbf6eac7e6b8d}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}}
+\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{Q\-V\-T\-K\-Image\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-V\-T\-K\-Image\-Widget\-::\-Q\-V\-T\-K\-Image\-Widget} (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_ab32cec8874449b586d7fbf6eac7e6b8d}
+Constructor for this Image\-Widget \hypertarget{class_q_v_t_k_image_widget_a60ba9a3e24a288e7a73cfca5caaf7393}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!$\sim$\-Q\-V\-T\-K\-Image\-Widget@{$\sim$\-Q\-V\-T\-K\-Image\-Widget}}
+\index{$\sim$\-Q\-V\-T\-K\-Image\-Widget@{$\sim$\-Q\-V\-T\-K\-Image\-Widget}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{$\sim$\-Q\-V\-T\-K\-Image\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-V\-T\-K\-Image\-Widget\-::$\sim$\-Q\-V\-T\-K\-Image\-Widget} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a60ba9a3e24a288e7a73cfca5caaf7393}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_q_v_t_k_image_widget_a48d0dad3ffc56126e2f3cbf14ee0fe98}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!display\-Image@{display\-Image}}
+\index{display\-Image@{display\-Image}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{display\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Q\-V\-T\-K\-Image\-Widget\-::display\-Image} (
+\begin{DoxyParamCaption}
+\item[{vtk\-Image\-Data $\ast$}]{image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a48d0dad3ffc56126e2f3cbf14ee0fe98}
+Display the given vtk\-Image \hypertarget{class_q_v_t_k_image_widget_a74232311be68637533974b68b4d63bc5}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!display\-Selected\-Image@{display\-Selected\-Image}}
+\index{display\-Selected\-Image@{display\-Selected\-Image}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{display\-Selected\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Q\-V\-T\-K\-Image\-Widget\-::display\-Selected\-Image} (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_a74232311be68637533974b68b4d63bc5}
+
+
+display an image stored in this image\-Stack. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em the} & index in the stack position of the image \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_v_t_k_image_widget_ae41186ba6e99598e4ad4380f7d7ef638}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Image\-Displayed\-Index@{get\-Image\-Displayed\-Index}}
+\index{get\-Image\-Displayed\-Index@{get\-Image\-Displayed\-Index}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Image\-Displayed\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Image\-Displayed\-Index} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_ae41186ba6e99598e4ad4380f7d7ef638}
+
+
+If an image stack is loaded, then return the index in the image stack of displayed image. 
+
+\hypertarget{class_q_v_t_k_image_widget_afbaa4d7a3881794acaef89eab7ad23ec}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Image\-Heigth@{get\-Image\-Heigth}}
+\index{get\-Image\-Heigth@{get\-Image\-Heigth}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Image\-Heigth}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Image\-Heigth} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_afbaa4d7a3881794acaef89eab7ad23ec}
+returns this image heigth \hypertarget{class_q_v_t_k_image_widget_aa2dc225bbfe290f57b0c61bde02566a8}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Image\-Size@{get\-Image\-Size}}
+\index{get\-Image\-Size@{get\-Image\-Size}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Image\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Image\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_aa2dc225bbfe290f57b0c61bde02566a8}
+returns an array with the width and height of the image \hypertarget{class_q_v_t_k_image_widget_a912b460d82be67f391cb1375429ffea7}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Image\-Stack@{get\-Image\-Stack}}
+\index{get\-Image\-Stack@{get\-Image\-Stack}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Image\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ $>$ {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Image\-Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_a912b460d82be67f391cb1375429ffea7}
+
+
+return this image stack 
+
+\hypertarget{class_q_v_t_k_image_widget_af0626a3fda57807caecbbe115e95d409}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Image\-Type@{get\-Image\-Type}}
+\index{get\-Image\-Type@{get\-Image\-Type}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Image\-Type}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Image\-Type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_af0626a3fda57807caecbbe115e95d409}
+
+
+Returns the type of image displayed. 
+
+\hypertarget{class_q_v_t_k_image_widget_aaa03d39486c547c29d54127cf936c884}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Image\-Viewer@{get\-Image\-Viewer}}
+\index{get\-Image\-Viewer@{get\-Image\-Viewer}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Image\-Viewer}]{\setlength{\rightskip}{0pt plus 5cm}vtk\-Smart\-Pointer$<$ vtk\-Image\-Viewer2 $>$ {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Image\-Viewer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_aaa03d39486c547c29d54127cf936c884}
+
+
+Return this widget image viewer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em image\-Viewer} & vtk\-Image\-Viewer2 target 2\-D image. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_v_t_k_image_widget_a73a82e34e589dc83bc98ea482ac49f53}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Image\-Width@{get\-Image\-Width}}
+\index{get\-Image\-Width@{get\-Image\-Width}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Image\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Image\-Width} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_a73a82e34e589dc83bc98ea482ac49f53}
+returns this image width \hypertarget{class_q_v_t_k_image_widget_ac1b3215b0360177a7dfaad8461f42790}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Num\-Of\-Dimesions@{get\-Num\-Of\-Dimesions}}
+\index{get\-Num\-Of\-Dimesions@{get\-Num\-Of\-Dimesions}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Num\-Of\-Dimesions}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Num\-Of\-Dimesions} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_ac1b3215b0360177a7dfaad8461f42790}
+
+
+Return the numer of dimensions of the image. 
+
+\hypertarget{class_q_v_t_k_image_widget_acb6c70c4b6e1394b0054d0902e72fcbf}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Pixel\-Type@{get\-Pixel\-Type}}
+\index{get\-Pixel\-Type@{get\-Pixel\-Type}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Pixel\-Type}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Pixel\-Type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_acb6c70c4b6e1394b0054d0902e72fcbf}
+
+
+Returns the pixel type in loaded images. 
+
+\hypertarget{class_q_v_t_k_image_widget_a41d916b555961f04dbdb571d8263c515}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Q\-V\-T\-K\-Widget@{get\-Q\-V\-T\-K\-Widget}}
+\index{get\-Q\-V\-T\-K\-Widget@{get\-Q\-V\-T\-K\-Widget}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Q\-V\-T\-K\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}Q\-V\-T\-K\-Widget $\ast$ {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Q\-V\-T\-K\-Widget} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_a41d916b555961f04dbdb571d8263c515}
+
+
+Return this qvtk\-Widget. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em the} & Q\-V\-T\-K\-Widget \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_v_t_k_image_widget_a4d7064fe8b60c16ce6e33122595850f2}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-X\-Picked@{get\-X\-Picked}}
+\index{get\-X\-Picked@{get\-X\-Picked}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-X\-Picked}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-X\-Picked} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_a4d7064fe8b60c16ce6e33122595850f2}
+
+
+Return the mouse x coordinate position when mouse left button is pressed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em int} & x position \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_v_t_k_image_widget_a9bb1f5c8af59046c632ce4401c14999b}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!get\-Y\-Picked@{get\-Y\-Picked}}
+\index{get\-Y\-Picked@{get\-Y\-Picked}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{get\-Y\-Picked}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::get\-Y\-Picked} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_a9bb1f5c8af59046c632ce4401c14999b}
+
+
+Return the mouse y coordinate position when mouse left button is pressed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em int} & y position \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_v_t_k_image_widget_a99ccfbda431140e785a672432b500743}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!set\-And\-Display\-Image@{set\-And\-Display\-Image}}
+\index{set\-And\-Display\-Image@{set\-And\-Display\-Image}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{set\-And\-Display\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Q\-V\-T\-K\-Image\-Widget\-::set\-And\-Display\-Image} (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{image\-Filename}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_a99ccfbda431140e785a672432b500743}
+Sets and display an image from a given image path \hypertarget{class_q_v_t_k_image_widget_aebaa775058eebd750adbdb7c70fdd90a}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!set\-And\-Display\-Image@{set\-And\-Display\-Image}}
+\index{set\-And\-Display\-Image@{set\-And\-Display\-Image}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{set\-And\-Display\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Q\-V\-T\-K\-Image\-Widget\-::set\-And\-Display\-Image} (
+\begin{DoxyParamCaption}
+\item[{vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$}]{image}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_aebaa775058eebd750adbdb7c70fdd90a}
+
+
+Sets and display the given vtk\-Image\-Data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a} & vtk\-Image\-Data to set and display \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_v_t_k_image_widget_acd43450864ef2c0cdd7b8d37f045d8fd}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!set\-And\-Display\-Multiple\-Images@{set\-And\-Display\-Multiple\-Images}}
+\index{set\-And\-Display\-Multiple\-Images@{set\-And\-Display\-Multiple\-Images}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{set\-And\-Display\-Multiple\-Images}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Q\-V\-T\-K\-Image\-Widget\-::set\-And\-Display\-Multiple\-Images} (
+\begin{DoxyParamCaption}
+\item[{Q\-String\-List}]{filenames}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_acd43450864ef2c0cdd7b8d37f045d8fd}
+
+
+Set and display multiple images from a given images filenames. Display the image corresponding to the first element on the filenmaes list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a} & Q\-String\-List that contain the filename of each image \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_v_t_k_image_widget_ae2b3f8c58a1c1162ce506b6da4a49e4c}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!set\-And\-Display\-Multiple\-Images@{set\-And\-Display\-Multiple\-Images}}
+\index{set\-And\-Display\-Multiple\-Images@{set\-And\-Display\-Multiple\-Images}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{set\-And\-Display\-Multiple\-Images}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Q\-V\-T\-K\-Image\-Widget\-::set\-And\-Display\-Multiple\-Images} (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ $>$}]{image\-Stack}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_ae2b3f8c58a1c1162ce506b6da4a49e4c}
+
+
+Set and display multiple images from a given vtk\-Image\-Data Array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a} & std\-::vector of vtk\-Image\-Data \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_v_t_k_image_widget_a148e0e9402c79f81afd1079754aec7d2}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!set\-Image\-Properties@{set\-Image\-Properties}}
+\index{set\-Image\-Properties@{set\-Image\-Properties}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{set\-Image\-Properties}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Q\-V\-T\-K\-Image\-Widget\-::set\-Image\-Properties} (
+\begin{DoxyParamCaption}
+\item[{bool}]{verbose}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a148e0e9402c79f81afd1079754aec7d2}
+Set the needed image properties (pixel\-Type, image\-Type, num of dimensions) \hypertarget{class_q_v_t_k_image_widget_a088f422bce686308654f8c0899c1780f}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!set\-X\-Picked@{set\-X\-Picked}}
+\index{set\-X\-Picked@{set\-X\-Picked}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{set\-X\-Picked}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Q\-V\-T\-K\-Image\-Widget\-::set\-X\-Picked} (
+\begin{DoxyParamCaption}
+\item[{int}]{x\-Position}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_a088f422bce686308654f8c0899c1780f}
+
+
+Set the mouse x coordinate position when mouse left button is pressed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em int} & x position \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_v_t_k_image_widget_a33c482cc6629c52762f27649e39f6006}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!set\-Y\-Picked@{set\-Y\-Picked}}
+\index{set\-Y\-Picked@{set\-Y\-Picked}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{set\-Y\-Picked}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Q\-V\-T\-K\-Image\-Widget\-::set\-Y\-Picked} (
+\begin{DoxyParamCaption}
+\item[{int}]{y\-Position}
+\end{DoxyParamCaption}
+)}}\label{d8/dd7/class_q_v_t_k_image_widget_a33c482cc6629c52762f27649e39f6006}
+
+
+Set the mouse y coordinate position when mouse left button is pressed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em int} & y position \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_q_v_t_k_image_widget_a4c5a9fab33dfc90a74abe775fb6c50f5}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!corner\-Annotation@{corner\-Annotation}}
+\index{corner\-Annotation@{corner\-Annotation}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{corner\-Annotation}]{\setlength{\rightskip}{0pt plus 5cm}vtk\-Smart\-Pointer$<$vtk\-Corner\-Annotation$>$ {\bf Q\-V\-T\-K\-Image\-Widget\-::corner\-Annotation}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a4c5a9fab33dfc90a74abe775fb6c50f5}
+
+
+Object for display information in the corners of the vtk\-Image\-Viewer2. 
+
+\hypertarget{class_q_v_t_k_image_widget_af88ceea1f8553e4773e50b0362ffec3a}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!image\-Displayed\-Index@{image\-Displayed\-Index}}
+\index{image\-Displayed\-Index@{image\-Displayed\-Index}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{image\-Displayed\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::image\-Displayed\-Index}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_af88ceea1f8553e4773e50b0362ffec3a}
+If image stack is displayed this sets a reference to current image displayed \hypertarget{class_q_v_t_k_image_widget_acc1b249b96b147b447366361331ef60a}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!image\-Height@{image\-Height}}
+\index{image\-Height@{image\-Height}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{image\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::image\-Height}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_acc1b249b96b147b447366361331ef60a}
+Heigth of the image \hypertarget{class_q_v_t_k_image_widget_a336708e27578dab885b069f12c120138}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!image\-Stack@{image\-Stack}}
+\index{image\-Stack@{image\-Stack}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{image\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ vtk\-Smart\-Pointer$<$vtk\-Image\-Data$>$ $>$ {\bf Q\-V\-T\-K\-Image\-Widget\-::image\-Stack}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a336708e27578dab885b069f12c120138}
+
+
+A vtk\-Image\-Data Vector for keep the image references when load an image stack. 
+
+\hypertarget{class_q_v_t_k_image_widget_a132867322988e692c324f5cc66697341}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!image\-Type@{image\-Type}}
+\index{image\-Type@{image\-Type}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{image\-Type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::image\-Type}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a132867322988e692c324f5cc66697341}
+the number of scalar components in the image 1 =$>$ grayscale, 3 =$>$ rgb \hypertarget{class_q_v_t_k_image_widget_aea73088ee5e4070c846427b8756cbfff}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!image\-Viewer@{image\-Viewer}}
+\index{image\-Viewer@{image\-Viewer}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{image\-Viewer}]{\setlength{\rightskip}{0pt plus 5cm}vtk\-Smart\-Pointer$<$vtk\-Image\-Viewer2$>$ {\bf Q\-V\-T\-K\-Image\-Widget\-::image\-Viewer}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_aea73088ee5e4070c846427b8756cbfff}
+the image viewer for display images \hypertarget{class_q_v_t_k_image_widget_a1ab611f7637a7885347b07ba9aa42e22}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!image\-Width@{image\-Width}}
+\index{image\-Width@{image\-Width}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{image\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::image\-Width}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a1ab611f7637a7885347b07ba9aa42e22}
+Width of the image \hypertarget{class_q_v_t_k_image_widget_ac1af73fa525569f5ec5d581561b379a3}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!is\-Image\-Stack\-Loaded@{is\-Image\-Stack\-Loaded}}
+\index{is\-Image\-Stack\-Loaded@{is\-Image\-Stack\-Loaded}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{is\-Image\-Stack\-Loaded}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Q\-V\-T\-K\-Image\-Widget\-::is\-Image\-Stack\-Loaded}}}\label{d8/dd7/class_q_v_t_k_image_widget_ac1af73fa525569f5ec5d581561b379a3}
+
+
+Flag to know if it's displayed an image stack. 
+
+\hypertarget{class_q_v_t_k_image_widget_ae5b308466d4f198990b9d132319f9f34}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!itk\-Image@{itk\-Image}}
+\index{itk\-Image@{itk\-Image}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{itk\-Image}]{\setlength{\rightskip}{0pt plus 5cm}Image\-Type\-::\-Pointer {\bf Q\-V\-T\-K\-Image\-Widget\-::itk\-Image}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_ae5b308466d4f198990b9d132319f9f34}
+The grayscale image displayed in this widget \hypertarget{class_q_v_t_k_image_widget_a6aff403421ea538248d48116a942271b}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!num\-Dimensions@{num\-Dimensions}}
+\index{num\-Dimensions@{num\-Dimensions}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{num\-Dimensions}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf Q\-V\-T\-K\-Image\-Widget\-::num\-Dimensions}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a6aff403421ea538248d48116a942271b}
+The number of the image dimensions \hypertarget{class_q_v_t_k_image_widget_a067b78e68ed458d840ad1cf0d16b4ad6}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!pixel\-Type@{pixel\-Type}}
+\index{pixel\-Type@{pixel\-Type}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{pixel\-Type}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf Q\-V\-T\-K\-Image\-Widget\-::pixel\-Type}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a067b78e68ed458d840ad1cf0d16b4ad6}
+The type of the image pixels \hypertarget{class_q_v_t_k_image_widget_a461f6ca20211ec9ff4b367aeb95e8139}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!qvtk\-Widget@{qvtk\-Widget}}
+\index{qvtk\-Widget@{qvtk\-Widget}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{qvtk\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}Q\-V\-T\-K\-Widget$\ast$ {\bf Q\-V\-T\-K\-Image\-Widget\-::qvtk\-Widget}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a461f6ca20211ec9ff4b367aeb95e8139}
+The Q\-V\-T\-K\-Widget for display and interact with the images \hypertarget{class_q_v_t_k_image_widget_a06c273e6e390e8e860fa4c0c932a2cf8}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!renderer@{renderer}}
+\index{renderer@{renderer}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{renderer}]{\setlength{\rightskip}{0pt plus 5cm}vtk\-Smart\-Pointer$<$vtk\-Renderer$>$ {\bf Q\-V\-T\-K\-Image\-Widget\-::renderer}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a06c273e6e390e8e860fa4c0c932a2cf8}
+The V\-T\-K renderer \hypertarget{class_q_v_t_k_image_widget_a1ffdb2716a14bd2cb4dc845c50fc474c}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!renwin@{renwin}}
+\index{renwin@{renwin}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{renwin}]{\setlength{\rightskip}{0pt plus 5cm}vtk\-Smart\-Pointer$<$vtk\-Render\-Window$>$ {\bf Q\-V\-T\-K\-Image\-Widget\-::renwin}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a1ffdb2716a14bd2cb4dc845c50fc474c}
+The V\-T\-K render window \hypertarget{class_q_v_t_k_image_widget_ae8cea614979ccdb6fe65551c8269b116}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!rgb\-Itk\-Image@{rgb\-Itk\-Image}}
+\index{rgb\-Itk\-Image@{rgb\-Itk\-Image}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{rgb\-Itk\-Image}]{\setlength{\rightskip}{0pt plus 5cm}R\-G\-B\-Image\-Type\-::\-Pointer {\bf Q\-V\-T\-K\-Image\-Widget\-::rgb\-Itk\-Image}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_ae8cea614979ccdb6fe65551c8269b116}
+The R\-G\-B image displayed for this widget \hypertarget{class_q_v_t_k_image_widget_aa55aaf6e037ee4d789449ff3d365201b}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!vtk\-Image@{vtk\-Image}}
+\index{vtk\-Image@{vtk\-Image}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{vtk\-Image}]{\setlength{\rightskip}{0pt plus 5cm}vtk\-Smart\-Pointer$<$vtk\-Image\-Data$>$ {\bf Q\-V\-T\-K\-Image\-Widget\-::vtk\-Image}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_aa55aaf6e037ee4d789449ff3d365201b}
+The V\-T\-K image to display i this window \hypertarget{class_q_v_t_k_image_widget_a17897def9ef084b36378099c51f94be3}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!x\-Picked@{x\-Picked}}
+\index{x\-Picked@{x\-Picked}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{x\-Picked}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::x\-Picked}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a17897def9ef084b36378099c51f94be3}
+The x coordinate of the picked position over the image \hypertarget{class_q_v_t_k_image_widget_afd88ea5dbed175232b0c15cbe4cdca89}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!x\-Position@{x\-Position}}
+\index{x\-Position@{x\-Position}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{x\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::x\-Position}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_afd88ea5dbed175232b0c15cbe4cdca89}
+current x coordinate of mouse position over the image \hypertarget{class_q_v_t_k_image_widget_a484346a1e5c956917e7e35a22aee125a}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!y\-Picked@{y\-Picked}}
+\index{y\-Picked@{y\-Picked}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{y\-Picked}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::y\-Picked}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a484346a1e5c956917e7e35a22aee125a}
+current y coordinate of picked position over the image \hypertarget{class_q_v_t_k_image_widget_a6724caff3a614db8321deaa70532255c}{\index{Q\-V\-T\-K\-Image\-Widget@{Q\-V\-T\-K\-Image\-Widget}!y\-Position@{y\-Position}}
+\index{y\-Position@{y\-Position}!QVTKImageWidget@{Q\-V\-T\-K\-Image\-Widget}}
+\subsubsection[{y\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Q\-V\-T\-K\-Image\-Widget\-::y\-Position}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d8/dd7/class_q_v_t_k_image_widget_a6724caff3a614db8321deaa70532255c}
+current y coordinate of mouse position over the image 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_q_v_t_k_image_widget_8h}{Q\-V\-T\-K\-Image\-Widget.\-h}\item 
+\hyperlink{_q_v_t_k_image_widget_8cpp}{Q\-V\-T\-K\-Image\-Widget.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,184 @@
+\hypertarget{class_main_window}{\section{Main\-Window Class Reference}
+\label{d9/dc6/class_main_window}\index{Main\-Window@{Main\-Window}}
+}
+
+
+Main Window for user Interaction.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\-Window} (Q\-Widget $\ast$parent=0)
+\item 
+\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\-Main\-Window} ()
+\item 
+void \hyperlink{class_main_window_a02dc93b38c4cf808db9d26e59521ec0b}{add\-Log\-Text} (Q\-String str)
+\begin{DoxyCompactList}\small\item\em Writes at the logger. \end{DoxyCompactList}\item 
+\hyperlink{class_q_v_t_k_image_widget}{Q\-V\-T\-K\-Image\-Widget} $\ast$ \hyperlink{class_main_window_ab31ca15852fe0ccb8d7571251b9940a0}{get\-Display\-Widget} ()
+\begin{DoxyCompactList}\small\item\em return this display widget \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_window_afdd9e98dfe3d68ab08aed2df37e8c1dc}{add\-Images} ()
+\begin{DoxyCompactList}\small\item\em Add image folder to application. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a67ec1c2d082b1b5a63347df9660275f1}{display\-Selected\-Image} (int idx)
+\begin{DoxyCompactList}\small\item\em Display selected image with the image slider. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a7a01aa3ba0210c1915d53d37d7272a13}{probe\-Calibration} ()
+\begin{DoxyCompactList}\small\item\em Implements a ultrasound 3\-D probe calibration, for navigate with the probe. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a873aaee370c1456b99f1a2399ff13691}{print} ()
+\begin{DoxyCompactList}\small\item\em Print the text on logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\-::\-Main\-Window $\ast$ \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}
+\begin{DoxyCompactList}\small\item\em main window object \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_main_window_a8b33f17919e8e99127a612476aefdaed}{images\-Filenames}
+\begin{DoxyCompactList}\small\item\em The filename of each selected image. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_main_window_aac7c4f4184a77a56eef59fff591c9521}{text\-On\-Text\-Area}
+\begin{DoxyCompactList}\small\item\em Text on the logger. \end{DoxyCompactList}\item 
+\hyperlink{class_q_v_t_k_image_widget}{Q\-V\-T\-K\-Image\-Widget} $\ast$ \hyperlink{class_main_window_a79daf435968c77e526ddf286bcc86a8f}{display\-Widget}
+\item 
+vtk\-Smart\-Pointer\\*
+$<$ vtk\-Event\-Qt\-Slot\-Connect $>$ \hyperlink{class_main_window_a2581229148c6c597849b827689e58a12}{Connections}
+\begin{DoxyCompactList}\small\item\em Connects with the probe calibration widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main Window for user Interaction. 
+
+This class is the main window of ht U\-S Probe \hyperlink{class_calibration}{Calibration}. Here the user can open the calibration images and open the calibration widget 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{\index{Main\-Window@{Main\-Window}!Main\-Window@{Main\-Window}}
+\index{Main\-Window@{Main\-Window}!MainWindow@{Main\-Window}}
+\subsubsection[{Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Main\-Window\-::\-Main\-Window} (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{d9/dc6/class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}
+\hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\index{Main\-Window@{Main\-Window}!$\sim$\-Main\-Window@{$\sim$\-Main\-Window}}
+\index{$\sim$\-Main\-Window@{$\sim$\-Main\-Window}!MainWindow@{Main\-Window}}
+\subsubsection[{$\sim$\-Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Main\-Window\-::$\sim$\-Main\-Window} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d9/dc6/class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_main_window_afdd9e98dfe3d68ab08aed2df37e8c1dc}{\index{Main\-Window@{Main\-Window}!add\-Images@{add\-Images}}
+\index{add\-Images@{add\-Images}!MainWindow@{Main\-Window}}
+\subsubsection[{add\-Images}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Main\-Window\-::add\-Images} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d9/dc6/class_main_window_afdd9e98dfe3d68ab08aed2df37e8c1dc}
+
+
+Add image folder to application. 
+
+\hypertarget{class_main_window_a02dc93b38c4cf808db9d26e59521ec0b}{\index{Main\-Window@{Main\-Window}!add\-Log\-Text@{add\-Log\-Text}}
+\index{add\-Log\-Text@{add\-Log\-Text}!MainWindow@{Main\-Window}}
+\subsubsection[{add\-Log\-Text}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Main\-Window\-::add\-Log\-Text} (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{str}
+\end{DoxyParamCaption}
+)}}\label{d9/dc6/class_main_window_a02dc93b38c4cf808db9d26e59521ec0b}
+
+
+Writes at the logger. 
+
+\hypertarget{class_main_window_a67ec1c2d082b1b5a63347df9660275f1}{\index{Main\-Window@{Main\-Window}!display\-Selected\-Image@{display\-Selected\-Image}}
+\index{display\-Selected\-Image@{display\-Selected\-Image}!MainWindow@{Main\-Window}}
+\subsubsection[{display\-Selected\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Main\-Window\-::display\-Selected\-Image} (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d9/dc6/class_main_window_a67ec1c2d082b1b5a63347df9660275f1}
+
+
+Display selected image with the image slider. 
+
+\hypertarget{class_main_window_ab31ca15852fe0ccb8d7571251b9940a0}{\index{Main\-Window@{Main\-Window}!get\-Display\-Widget@{get\-Display\-Widget}}
+\index{get\-Display\-Widget@{get\-Display\-Widget}!MainWindow@{Main\-Window}}
+\subsubsection[{get\-Display\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-V\-T\-K\-Image\-Widget} $\ast$ {\bf Main\-Window\-::get\-Display\-Widget} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d9/dc6/class_main_window_ab31ca15852fe0ccb8d7571251b9940a0}
+
+
+return this display widget 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em this} & display widget \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a873aaee370c1456b99f1a2399ff13691}{\index{Main\-Window@{Main\-Window}!print@{print}}
+\index{print@{print}!MainWindow@{Main\-Window}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Main\-Window\-::print} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d9/dc6/class_main_window_a873aaee370c1456b99f1a2399ff13691}
+
+
+Print the text on logger. 
+
+\hypertarget{class_main_window_a7a01aa3ba0210c1915d53d37d7272a13}{\index{Main\-Window@{Main\-Window}!probe\-Calibration@{probe\-Calibration}}
+\index{probe\-Calibration@{probe\-Calibration}!MainWindow@{Main\-Window}}
+\subsubsection[{probe\-Calibration}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Main\-Window\-::probe\-Calibration} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d9/dc6/class_main_window_a7a01aa3ba0210c1915d53d37d7272a13}
+
+
+Implements a ultrasound 3\-D probe calibration, for navigate with the probe. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_main_window_a2581229148c6c597849b827689e58a12}{\index{Main\-Window@{Main\-Window}!Connections@{Connections}}
+\index{Connections@{Connections}!MainWindow@{Main\-Window}}
+\subsubsection[{Connections}]{\setlength{\rightskip}{0pt plus 5cm}vtk\-Smart\-Pointer$<$vtk\-Event\-Qt\-Slot\-Connect$>$ {\bf Main\-Window\-::\-Connections}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc6/class_main_window_a2581229148c6c597849b827689e58a12}
+
+
+Connects with the probe calibration widget. 
+
+\hypertarget{class_main_window_a79daf435968c77e526ddf286bcc86a8f}{\index{Main\-Window@{Main\-Window}!display\-Widget@{display\-Widget}}
+\index{display\-Widget@{display\-Widget}!MainWindow@{Main\-Window}}
+\subsubsection[{display\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-V\-T\-K\-Image\-Widget}$\ast$ {\bf Main\-Window\-::display\-Widget}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc6/class_main_window_a79daf435968c77e526ddf286bcc86a8f}
+Central widget for display image purposes \hypertarget{class_main_window_a8b33f17919e8e99127a612476aefdaed}{\index{Main\-Window@{Main\-Window}!images\-Filenames@{images\-Filenames}}
+\index{images\-Filenames@{images\-Filenames}!MainWindow@{Main\-Window}}
+\subsubsection[{images\-Filenames}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List {\bf Main\-Window\-::images\-Filenames}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc6/class_main_window_a8b33f17919e8e99127a612476aefdaed}
+
+
+The filename of each selected image. 
+
+\hypertarget{class_main_window_aac7c4f4184a77a56eef59fff591c9521}{\index{Main\-Window@{Main\-Window}!text\-On\-Text\-Area@{text\-On\-Text\-Area}}
+\index{text\-On\-Text\-Area@{text\-On\-Text\-Area}!MainWindow@{Main\-Window}}
+\subsubsection[{text\-On\-Text\-Area}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String {\bf Main\-Window\-::text\-On\-Text\-Area}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc6/class_main_window_aac7c4f4184a77a56eef59fff591c9521}
+
+
+Text on the logger. 
+
+\hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}{\index{Main\-Window@{Main\-Window}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{Main\-Window}}
+\subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\-::\-Main\-Window$\ast$ {\bf Main\-Window\-::ui}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d9/dc6/class_main_window_a35466a70ed47252a0191168126a352a5}
+
+
+main window object 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mainwindow_8h}{mainwindow.\-h}\item 
+\hyperlink{mainwindow_8cpp}{mainwindow.\-cpp}\end{DoxyCompactItemize}

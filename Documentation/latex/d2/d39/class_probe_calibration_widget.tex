@@ -1,0 +1,265 @@
+\hypertarget{class_probe_calibration_widget}{\section{Probe\-Calibration\-Widget Class Reference}
+\label{d2/d39/class_probe_calibration_widget}\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}}
+}
+
+
+Obtain data for calibration process.  
+
+
+
+
+{\ttfamily \#include $<$Probe\-Calibration\-Widget.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_probe_calibration_widget_a6c430e06b9cc85ea1f35c450ed1a421b}{Probe\-Calibration\-Widget} (Q\-Widget $\ast$parent=0)
+\item 
+virtual \hyperlink{class_probe_calibration_widget_af4234866a388c0839431195e0b34310e}{$\sim$\-Probe\-Calibration\-Widget} ()
+\item 
+void \hyperlink{class_probe_calibration_widget_aa2ad548059e24e10bfcc4d87159b8ae8}{set\-Image\-Stack} (std\-::vector$<$ vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ $>$ \hyperlink{class_probe_calibration_widget_adf05803fc62518128463039d5b46ac28}{image\-Stack})
+\begin{DoxyCompactList}\small\item\em Set this stack of vtk\-Image\-Data. \end{DoxyCompactList}\item 
+void \hyperlink{class_probe_calibration_widget_aada45ee83e39d4df27cdc6bb6255c870}{set\-Image} (vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ \hyperlink{class_probe_calibration_widget_a5f639b7a6f3c520427f245e44c51c962}{image})
+\begin{DoxyCompactList}\small\item\em Set this vtk\-Image\-Data. \end{DoxyCompactList}\item 
+void \hyperlink{class_probe_calibration_widget_a852e585c1976dd0c141f30fbaf96b25e}{set\-Main\-Window} (\hyperlink{class_main_window}{Main\-Window} $\ast$mainwindow)
+\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_probe_calibration_widget_aee10394430b33e5c67faffc0711aa72c}{crop} ()
+\begin{DoxyCompactList}\small\item\em crop the images to delete the extra information \end{DoxyCompactList}\item 
+void \hyperlink{class_probe_calibration_widget_acd3137343b02733ba647c207874f1553}{get\-Coordinates} ()
+\begin{DoxyCompactList}\small\item\em get the cross point coordinates \end{DoxyCompactList}\item 
+void \hyperlink{class_probe_calibration_widget_a2c7d23d2c8b75bc8bae31c3593f7ce68}{calibrate} ()
+\begin{DoxyCompactList}\small\item\em Calls Calibrate.\-h to estimate the calibration parameters. \end{DoxyCompactList}\item 
+void \hyperlink{class_probe_calibration_widget_a272a7b3f75c96bafb868419ace5e0988}{load\-Rotations\-File} ()
+\begin{DoxyCompactList}\small\item\em Load the rotations file. \end{DoxyCompactList}\item 
+void \hyperlink{class_probe_calibration_widget_a33f06682399f16721d717c97ca0654be}{load\-Translations\-File} ()
+\begin{DoxyCompactList}\small\item\em Load the translation file. \end{DoxyCompactList}\item 
+void \hyperlink{class_probe_calibration_widget_a441905e2966c3bc87884d96c31073cd5}{save\-Calibration} ()
+\begin{DoxyCompactList}\small\item\em Save the Estimated Parameters in a .txt file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ \hyperlink{class_probe_calibration_widget_a87d9b425235afcabde1a9de067ba8d2d}{crop\-Probe\-Image} (vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ \hyperlink{class_probe_calibration_widget_a5f639b7a6f3c520427f245e44c51c962}{image}, int depth\-Type)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_probe_calibration_widget_a15fe2768facb79d700b4481479e56ad0}{work\-With\-Stack}
+\item 
+std\-::vector$<$ vtk\-Smart\-Pointer\\*
+$<$ vtk\-Image\-Data $>$ $>$ \hyperlink{class_probe_calibration_widget_adf05803fc62518128463039d5b46ac28}{image\-Stack}
+\begin{DoxyCompactList}\small\item\em an Array of vtk\-Image\-Data to work \end{DoxyCompactList}\item 
+vnl\-\_\-matrix$<$ double $>$ \hyperlink{class_probe_calibration_widget_a7d65e018cd29fd62b2d9b1aca19e3276}{translations}
+\begin{DoxyCompactList}\small\item\em a vnl\-\_\-matrix to store the translations of each image given by the tracker \end{DoxyCompactList}\item 
+vnl\-\_\-matrix$<$ double $>$ \hyperlink{class_probe_calibration_widget_ac723f22e498e6c58360a021302caf723}{rotations}
+\begin{DoxyCompactList}\small\item\em a vnl\-\_\-matrix to store the rotations of each image given by the tracker \end{DoxyCompactList}\item 
+float \hyperlink{class_probe_calibration_widget_ad73b59c52447ede4f5976f05741bc16a}{rotations\-\_\-2} \mbox{[}7\mbox{]}\mbox{[}4\mbox{]}
+\item 
+\hyperlink{class_main_window}{Main\-Window} $\ast$ \hyperlink{class_probe_calibration_widget_aee1fb564f8f3e03cd8d932cabe6716b4}{main\-Window}
+\item 
+vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ \hyperlink{class_probe_calibration_widget_a5f639b7a6f3c520427f245e44c51c962}{image}
+\begin{DoxyCompactList}\small\item\em the vtk\-Image\-Data to work \end{DoxyCompactList}\item 
+vnl\-\_\-matrix$<$ double $>$ \hyperlink{class_probe_calibration_widget_a38ce67d5acddadf91da9b7cf64cbbc30}{coords}
+\begin{DoxyCompactList}\small\item\em a vnl\-\_\-matrix to store the selected coordinates on each image \end{DoxyCompactList}\item 
+std\-::vector$<$ double $>$ \hyperlink{class_probe_calibration_widget_a12ff40e5b49bfb1f10e81e28a9b03e07}{calibration\-Parameters}
+\begin{DoxyCompactList}\small\item\em the estimate calibration parameters by \hyperlink{_calibration_8h}{Calibration.\-h} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Obtain data for calibration process. 
+
+This class obtain the necesary data to use the Calibrtion class. It let the user to set the croos wire point on the images, load Rotation and Translation Data. It also allows the user to save the calibration estimated paraeters in a .txt file 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_probe_calibration_widget_a6c430e06b9cc85ea1f35c450ed1a421b}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}}
+\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{Probe\-Calibration\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Probe\-Calibration\-Widget\-::\-Probe\-Calibration\-Widget} (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{d2/d39/class_probe_calibration_widget_a6c430e06b9cc85ea1f35c450ed1a421b}
+Constructor \hypertarget{class_probe_calibration_widget_af4234866a388c0839431195e0b34310e}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!$\sim$\-Probe\-Calibration\-Widget@{$\sim$\-Probe\-Calibration\-Widget}}
+\index{$\sim$\-Probe\-Calibration\-Widget@{$\sim$\-Probe\-Calibration\-Widget}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{$\sim$\-Probe\-Calibration\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Probe\-Calibration\-Widget\-::$\sim$\-Probe\-Calibration\-Widget} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_af4234866a388c0839431195e0b34310e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_probe_calibration_widget_a2c7d23d2c8b75bc8bae31c3593f7ce68}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{calibrate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Probe\-Calibration\-Widget\-::calibrate} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a2c7d23d2c8b75bc8bae31c3593f7ce68}
+
+
+Calls Calibrate.\-h to estimate the calibration parameters. 
+
+\hypertarget{class_probe_calibration_widget_aee10394430b33e5c67faffc0711aa72c}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!crop@{crop}}
+\index{crop@{crop}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{crop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Probe\-Calibration\-Widget\-::crop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_aee10394430b33e5c67faffc0711aa72c}
+
+
+crop the images to delete the extra information 
+
+\hypertarget{class_probe_calibration_widget_a87d9b425235afcabde1a9de067ba8d2d}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!crop\-Probe\-Image@{crop\-Probe\-Image}}
+\index{crop\-Probe\-Image@{crop\-Probe\-Image}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{crop\-Probe\-Image}]{\setlength{\rightskip}{0pt plus 5cm}vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ {\bf Probe\-Calibration\-Widget\-::crop\-Probe\-Image} (
+\begin{DoxyParamCaption}
+\item[{vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$}]{image, }
+\item[{int}]{depth\-Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a87d9b425235afcabde1a9de067ba8d2d}
+Crop ultrasound image depnding of the depth type \hypertarget{class_probe_calibration_widget_acd3137343b02733ba647c207874f1553}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!get\-Coordinates@{get\-Coordinates}}
+\index{get\-Coordinates@{get\-Coordinates}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{get\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Probe\-Calibration\-Widget\-::get\-Coordinates} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_acd3137343b02733ba647c207874f1553}
+
+
+get the cross point coordinates 
+
+\hypertarget{class_probe_calibration_widget_a272a7b3f75c96bafb868419ace5e0988}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!load\-Rotations\-File@{load\-Rotations\-File}}
+\index{load\-Rotations\-File@{load\-Rotations\-File}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{load\-Rotations\-File}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Probe\-Calibration\-Widget\-::load\-Rotations\-File} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a272a7b3f75c96bafb868419ace5e0988}
+
+
+Load the rotations file. 
+
+\hypertarget{class_probe_calibration_widget_a33f06682399f16721d717c97ca0654be}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!load\-Translations\-File@{load\-Translations\-File}}
+\index{load\-Translations\-File@{load\-Translations\-File}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{load\-Translations\-File}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Probe\-Calibration\-Widget\-::load\-Translations\-File} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a33f06682399f16721d717c97ca0654be}
+
+
+Load the translation file. 
+
+\hypertarget{class_probe_calibration_widget_a441905e2966c3bc87884d96c31073cd5}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!save\-Calibration@{save\-Calibration}}
+\index{save\-Calibration@{save\-Calibration}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{save\-Calibration}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Probe\-Calibration\-Widget\-::save\-Calibration} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private, slot\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a441905e2966c3bc87884d96c31073cd5}
+
+
+Save the Estimated Parameters in a .txt file. 
+
+\hypertarget{class_probe_calibration_widget_aada45ee83e39d4df27cdc6bb6255c870}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!set\-Image@{set\-Image}}
+\index{set\-Image@{set\-Image}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{set\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Probe\-Calibration\-Widget\-::set\-Image} (
+\begin{DoxyParamCaption}
+\item[{vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$}]{image}
+\end{DoxyParamCaption}
+)}}\label{d2/d39/class_probe_calibration_widget_aada45ee83e39d4df27cdc6bb6255c870}
+
+
+Set this vtk\-Image\-Data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a} & smart Pointer of vtk\-Image\-Data \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_probe_calibration_widget_aa2ad548059e24e10bfcc4d87159b8ae8}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!set\-Image\-Stack@{set\-Image\-Stack}}
+\index{set\-Image\-Stack@{set\-Image\-Stack}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{set\-Image\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Probe\-Calibration\-Widget\-::set\-Image\-Stack} (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ vtk\-Smart\-Pointer$<$ vtk\-Image\-Data $>$ $>$}]{image\-Stack}
+\end{DoxyParamCaption}
+)}}\label{d2/d39/class_probe_calibration_widget_aa2ad548059e24e10bfcc4d87159b8ae8}
+
+
+Set this stack of vtk\-Image\-Data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a} & std Vector of vtk\-Image\-Data \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_probe_calibration_widget_a852e585c1976dd0c141f30fbaf96b25e}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!set\-Main\-Window@{set\-Main\-Window}}
+\index{set\-Main\-Window@{set\-Main\-Window}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{set\-Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Probe\-Calibration\-Widget\-::set\-Main\-Window} (
+\begin{DoxyParamCaption}
+\item[{{\bf Main\-Window} $\ast$}]{mainwindow}
+\end{DoxyParamCaption}
+)}}\label{d2/d39/class_probe_calibration_widget_a852e585c1976dd0c141f30fbaf96b25e}
+Set the window to display the crop images 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_probe_calibration_widget_a12ff40e5b49bfb1f10e81e28a9b03e07}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!calibration\-Parameters@{calibration\-Parameters}}
+\index{calibration\-Parameters@{calibration\-Parameters}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{calibration\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ {\bf Probe\-Calibration\-Widget\-::calibration\-Parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a12ff40e5b49bfb1f10e81e28a9b03e07}
+
+
+the estimate calibration parameters by \hyperlink{_calibration_8h}{Calibration.\-h} 
+
+\hypertarget{class_probe_calibration_widget_a38ce67d5acddadf91da9b7cf64cbbc30}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!coords@{coords}}
+\index{coords@{coords}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{coords}]{\setlength{\rightskip}{0pt plus 5cm}vnl\-\_\-matrix$<$double$>$ {\bf Probe\-Calibration\-Widget\-::coords}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a38ce67d5acddadf91da9b7cf64cbbc30}
+
+
+a vnl\-\_\-matrix to store the selected coordinates on each image 
+
+\hypertarget{class_probe_calibration_widget_a5f639b7a6f3c520427f245e44c51c962}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!image@{image}}
+\index{image@{image}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}vtk\-Smart\-Pointer$<$vtk\-Image\-Data$>$ {\bf Probe\-Calibration\-Widget\-::image}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a5f639b7a6f3c520427f245e44c51c962}
+
+
+the vtk\-Image\-Data to work 
+
+\hypertarget{class_probe_calibration_widget_adf05803fc62518128463039d5b46ac28}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!image\-Stack@{image\-Stack}}
+\index{image\-Stack@{image\-Stack}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{image\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ vtk\-Smart\-Pointer$<$vtk\-Image\-Data$>$ $>$ {\bf Probe\-Calibration\-Widget\-::image\-Stack}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_adf05803fc62518128463039d5b46ac28}
+
+
+an Array of vtk\-Image\-Data to work 
+
+\hypertarget{class_probe_calibration_widget_aee1fb564f8f3e03cd8d932cabe6716b4}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!main\-Window@{main\-Window}}
+\index{main\-Window@{main\-Window}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Main\-Window}$\ast$ {\bf Probe\-Calibration\-Widget\-::main\-Window}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_aee1fb564f8f3e03cd8d932cabe6716b4}
+the main window to call it \hypertarget{class_probe_calibration_widget_ac723f22e498e6c58360a021302caf723}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!rotations@{rotations}}
+\index{rotations@{rotations}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{rotations}]{\setlength{\rightskip}{0pt plus 5cm}vnl\-\_\-matrix$<$double$>$ {\bf Probe\-Calibration\-Widget\-::rotations}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_ac723f22e498e6c58360a021302caf723}
+
+
+a vnl\-\_\-matrix to store the rotations of each image given by the tracker 
+
+\hypertarget{class_probe_calibration_widget_ad73b59c52447ede4f5976f05741bc16a}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!rotations\-\_\-2@{rotations\-\_\-2}}
+\index{rotations\-\_\-2@{rotations\-\_\-2}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{rotations\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Probe\-Calibration\-Widget\-::rotations\-\_\-2}\mbox{[}7\mbox{]}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_ad73b59c52447ede4f5976f05741bc16a}
+\hypertarget{class_probe_calibration_widget_a7d65e018cd29fd62b2d9b1aca19e3276}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!translations@{translations}}
+\index{translations@{translations}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{translations}]{\setlength{\rightskip}{0pt plus 5cm}vnl\-\_\-matrix$<$double$>$ {\bf Probe\-Calibration\-Widget\-::translations}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a7d65e018cd29fd62b2d9b1aca19e3276}
+
+
+a vnl\-\_\-matrix to store the translations of each image given by the tracker 
+
+\hypertarget{class_probe_calibration_widget_a15fe2768facb79d700b4481479e56ad0}{\index{Probe\-Calibration\-Widget@{Probe\-Calibration\-Widget}!work\-With\-Stack@{work\-With\-Stack}}
+\index{work\-With\-Stack@{work\-With\-Stack}!ProbeCalibrationWidget@{Probe\-Calibration\-Widget}}
+\subsubsection[{work\-With\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Probe\-Calibration\-Widget\-::work\-With\-Stack}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d2/d39/class_probe_calibration_widget_a15fe2768facb79d700b4481479e56ad0}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_probe_calibration_widget_8h}{Probe\-Calibration\-Widget.\-h}\item 
+\hyperlink{_probe_calibration_widget_8cpp}{Probe\-Calibration\-Widget.\-cpp}\end{DoxyCompactItemize}
