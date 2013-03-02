@@ -369,13 +369,8 @@ void ProbeCalibrationWidget::calibrate()
 void ProbeCalibrationWidget::saveCalibration()
 {
 
-    QString saveCalibrationDirectory = QFileDialog::getExistingDirectory(
-                this, tr("Choose Directory to Save Calibration"), QDir::currentPath(), 
-				QFileDialog::ShowDirsOnly );
-
-    QString filename = "/EstimatedCalibrationParameters.txt";
-
-    QString saveCalibrationFile = saveCalibrationDirectory.append(filename);
+    QString saveCalibrationFile = QFileDialog::getSaveFileName(
+                this, tr("Choose Directory to Save Calibration"), QDir::currentPath(), tr("Txt (*.txt)"));
 
     QFile file(saveCalibrationFile);
 
